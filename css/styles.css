@@ -11,6 +11,7 @@
     --logo-blck-part :#000000;
     --outline: rgba(236, 236, 236, 1);
     --outline-projects: rgba(238, 238, 238, 1);
+    --features-bg:rgba(245, 244, 250, 1);
 }
 
 h1,h2,h3,h4,p,ul{
@@ -217,6 +218,13 @@ header{
 .features .item:not(:last-child) {
     margin-right: 30px;
 }
+
+/* .features .item::before{
+    display: inline-block;
+    width: 270px;
+    height: 120px;
+    background-color: var(--features-bg);
+} */
 
 .feature{
     color: var(--title-text-color);
