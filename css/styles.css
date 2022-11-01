@@ -219,12 +219,32 @@ header{
     margin-right: 30px;
 }
 
-/* .features .item::before{
-    display: inline-block;
-    width: 270px;
+ .features .item::before{
+    content:"";
+    display: block;
     height: 120px;
     background-color: var(--features-bg);
-} */
+
+    margin-bottom: 30px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-anten::before{
+    background-image: url(../images/antenna.svg);
+}
+.icon-clock::before{
+    background-image: url(../images/clock.svg);
+}
+.icon-diagram::before{
+    background-image: url(../images/diagram.svg);
+}
+.icon-astronaut::before{
+    background-image: url(../images/astronaut.svg);
+}
+
+
 
 .feature{
     color: var(--title-text-color);
@@ -302,6 +322,11 @@ header{
     margin-top: 10px;
     margin-bottom: 30px;
 }
+/* Clients */
+.clients{
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
 
 /* Footer */
@@ -312,6 +337,9 @@ header{
     padding-bottom: 60px;
 }
 
+.footer>.container {
+    display: flex;
+}
 
 .logo.footer{
     color: var(--primary-white-color);
@@ -346,6 +374,22 @@ header{
 .address .street:hover{
     color: var(--accent-color);
 }
+
+.footer-links{
+    margin-left: 70px;
+    margin-top: 12px;
+}
+
+.footer-text{
+    color: var(--primary-white-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
 /* Portfolio */
 .portfolio{
     padding-top: 94px;
