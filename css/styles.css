@@ -12,6 +12,8 @@
     --outline: rgba(236, 236, 236, 1);
     --outline-projects: rgba(238, 238, 238, 1);
     --features-bg:rgba(245, 244, 250, 1);
+    --social-icon-main-color: #AFB1B8;
+    --footer-links-bg:rgba(255, 255, 255, 0.1);
 }
 
 h1,h2,h3,h4,p,ul{
@@ -146,6 +148,10 @@ header{
 
     padding-top: 32px;
     padding-bottom: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .contact .link:hover,
 .contact .link:focus{
@@ -154,6 +160,25 @@ header{
 .contact .item:not(:last-child){
     margin-right: 50px
 }
+
+.envelope{
+    margin-right: 10px;
+    fill:var(--primary-text-color);
+}
+
+.contact .link:hover .envelope{
+    fill: var(--accent-color);
+}
+
+.smartphone{
+    margin-right: 10px;
+    fill: var(--primary-text-color);
+}
+
+.contact .link:hover .smartphone {
+    fill: var(--accent-color);
+}
+
 /* Hero */
 .hero {
     background-color: var(--secondary-bg-color);
@@ -234,10 +259,7 @@ header{
     min-width: 270px;
 }
 
-.antenna-bg,
-.clock-bg,
-.diagram-bg,
-.astronaut-bg{
+.feature-bg{
     background-color: var(--features-bg);
     width: 270px;
     height: 120px;
@@ -308,8 +330,56 @@ header{
     text-align: center;
 
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 16px;
 }
+.social-media{
+    margin-bottom: 30px;
+    margin-left: 32px;
+    margin-right: 32px;
+}
+
+.social-media .unit:not(:last-child),
+.footer-social-media .unit:not(:last-child){
+    margin-right: 10px;
+}
+
+.instagram,
+.twitter,
+.fb,
+.linkedin{
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;  
+}
+.instagram:hover,
+.twitter:hover,
+.fb:hover,
+.linkedin:hover,
+.footer-social-media .instagram:hover,
+.footer-social-media .twitter:hover,
+.footer-social-media .fb:hover,
+.footer-social-media .linkedin:hover{
+    background-color: var(--accent-color);
+}
+
+
+.instagram-icon,
+.twitter-icon,
+.fb-icon,
+.linkedin-icon{
+    fill: var(--social-icon-main-color);
+}
+.instagram:hover .instagram-icon,
+.twitter:hover .twitter-icon,
+.fb:hover .fb-icon,
+.linkedin:hover .linkedin-icon{
+    fill: var(--primary-white-color);
+}
+
 /* Clients */
 .clients{
     padding-top: 94px;
@@ -376,6 +446,24 @@ header{
 
     margin-top: 12px;
     margin-bottom: 20px;
+}
+
+.footer-social-media{
+    display: flex;
+}
+
+.footer-social-media .instagram,
+.footer-social-media .twitter,
+.footer-social-media .fb,
+.footer-social-media .linkedin{
+    background-color: var(--footer-links-bg);
+}
+
+.footer-social-media .instagram-icon,
+.footer-social-media .twitter-icon,
+.footer-social-media .fb-icon,
+.footer-social-media .linkedin-icon {
+    fill: var(--primary-white-color);
 }
 
 /* Portfolio */
