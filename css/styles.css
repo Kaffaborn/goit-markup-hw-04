@@ -345,10 +345,7 @@ header{
     margin-right: 10px;
 }
 
-.instagram,
-.twitter,
-.fb,
-.linkedin{
+.social-media-link{
     display: flex;
     border-radius: 50%;
     align-items: center;
@@ -357,40 +354,19 @@ header{
     width: 44px;
     height: 44px;  
 }
-.instagram:hover,
-.twitter:hover,
-.fb:hover,
-.linkedin:hover,
-.footer-social-media .instagram:hover,
-.footer-social-media .twitter:hover,
-.footer-social-media .fb:hover,
-.footer-social-media .linkedin:hover,
-.instagram:focus,
-.twitter:focus,
-.fb:focus,
-.linkedin:focus,
-.footer-social-media .instagram:focus,
-.footer-social-media .twitter:focus,
-.footer-social-media .fb:focus,
-.footer-social-media .linkedin:focus{
+.social-media-link:hover,
+.footer-social-media .social-media-link:hover,
+.social-media-link:focus,
+.footer-social-media .social-media-link:focus{
     background-color: var(--accent-color);
 }
 
 
-.instagram-icon,
-.twitter-icon,
-.fb-icon,
-.linkedin-icon{
+.social-media-icon{
     fill: var(--icon-main-color);
 }
-.instagram:hover .instagram-icon,
-.twitter:hover .twitter-icon,
-.fb:hover .fb-icon,
-.linkedin:hover .linkedin-icon,
-.instagram:focus .instagram-icon,
-.twitter:focus .twitter-icon,
-.fb:focus .fb-icon,
-.linkedin:focus .linkedin-icon{
+.social-media-link:hover .social-media-icon,
+.social-media-link:focus .social-media-icon{
     fill: var(--primary-white-color);
 }
 
@@ -500,17 +476,11 @@ header{
     display: flex;
 }
 
-.footer-social-media .instagram,
-.footer-social-media .twitter,
-.footer-social-media .fb,
-.footer-social-media .linkedin{
+.footer-social-media .social-media-link{
     background-color: var(--footer-links-bg);
 }
 
-.footer-social-media .instagram-icon,
-.footer-social-media .twitter-icon,
-.footer-social-media .fb-icon,
-.footer-social-media .linkedin-icon {
+.footer-social-media .social-media-icon{
     fill: var(--primary-white-color);
 }
 
