@@ -12,7 +12,7 @@
     --outline: rgba(236, 236, 236, 1);
     --outline-projects: rgba(238, 238, 238, 1);
     --features-bg:rgba(245, 244, 250, 1);
-    --social-icon-main-color: #AFB1B8;
+    --icon-main-color: #AFB1B8;
     --footer-links-bg:rgba(255, 255, 255, 0.1);
 }
 
@@ -166,7 +166,8 @@ header{
     fill:var(--primary-text-color);
 }
 
-.contact .link:hover .envelope{
+.contact .link:hover .envelope,
+.contact .link:focus .envelope{
     fill: var(--accent-color);
 }
 
@@ -175,7 +176,8 @@ header{
     fill: var(--primary-text-color);
 }
 
-.contact .link:hover .smartphone {
+.contact .link:hover .smartphone,
+.contact .link:focus .smartphone{
     fill: var(--accent-color);
 }
 
@@ -362,7 +364,15 @@ header{
 .footer-social-media .instagram:hover,
 .footer-social-media .twitter:hover,
 .footer-social-media .fb:hover,
-.footer-social-media .linkedin:hover{
+.footer-social-media .linkedin:hover,
+.instagram:focus,
+.twitter:focus,
+.fb:focus,
+.linkedin:focus,
+.footer-social-media .instagram:focus,
+.footer-social-media .twitter:focus,
+.footer-social-media .fb:focus,
+.footer-social-media .linkedin:focus{
     background-color: var(--accent-color);
 }
 
@@ -371,19 +381,57 @@ header{
 .twitter-icon,
 .fb-icon,
 .linkedin-icon{
-    fill: var(--social-icon-main-color);
+    fill: var(--icon-main-color);
 }
 .instagram:hover .instagram-icon,
 .twitter:hover .twitter-icon,
 .fb:hover .fb-icon,
-.linkedin:hover .linkedin-icon{
+.linkedin:hover .linkedin-icon,
+.instagram:focus .instagram-icon,
+.twitter:focus .twitter-icon,
+.fb:focus .fb-icon,
+.linkedin:focus .linkedin-icon{
     fill: var(--primary-white-color);
 }
 
 /* Clients */
-.clients{
+.regular-clients{
     padding-top: 94px;
     padding-bottom: 94px;
+}
+.regular-clients .section-title{
+    margin-bottom: 50px;
+}
+
+.clients{
+    display: flex;
+    justify-content: center;
+}
+
+.client:not(:last-child){
+    margin-right: 30px;
+}
+
+.client .link{
+    display: flex;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icon-main-color);
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+.client .link:hover,
+.client .link:focus{
+    border-color: var(--accent-color);
+}
+
+.icon-client{
+    fill:var(--icon-main-color)
+}
+.client .link:hover .icon-client,
+.client .link:focus .icon-client{
+    fill: var(--accent-color);
 }
 
 
@@ -514,6 +562,13 @@ header{
 
 .project{
     flex-basis: calc((100% - 60px) / 3);
+}
+
+.project:hover,
+.project:focus{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
+                0px 4px 4px rgba(0, 0, 0, 0.06),
+                1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-bottom{
