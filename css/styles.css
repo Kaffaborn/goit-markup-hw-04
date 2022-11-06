@@ -161,21 +161,14 @@ header{
     margin-right: 50px
 }
 
-.envelope{
+.envelope,
+.smartphone{
     margin-right: 10px;
-    fill:var(--primary-text-color);
+    fill:currentColor;
 }
 
 .contact .link:hover .envelope,
-.contact .link:focus .envelope{
-    fill: var(--accent-color);
-}
-
-.smartphone{
-    margin-right: 10px;
-    fill: var(--primary-text-color);
-}
-
+.contact .link:focus .envelope,
 .contact .link:hover .smartphone,
 .contact .link:focus .smartphone{
     fill: var(--accent-color);
@@ -352,7 +345,9 @@ header{
     justify-content: center;
 
     width: 44px;
-    height: 44px;  
+    height: 44px;
+
+    color:var(--icon-main-color);
 }
 .social-media-link:hover,
 .footer-social-media .social-media-link:hover,
@@ -362,9 +357,12 @@ header{
 }
 
 
-.social-media-icon{
-    fill: var(--icon-main-color);
+.social-media-icon,
+.icon-client,
+.footer-social-media .social-media-icon{
+    fill:currentColor;
 }
+
 .social-media-link:hover .social-media-icon,
 .social-media-link:focus .social-media-icon{
     fill: var(--primary-white-color);
@@ -396,15 +394,14 @@ header{
     border-radius: 4px;
     align-items: center;
     justify-content: center;
+
+    color: var(--icon-main-color);
 }
 .client .link:hover,
 .client .link:focus{
     border-color: var(--accent-color);
 }
 
-.icon-client{
-    fill:var(--icon-main-color)
-}
 .client .link:hover .icon-client,
 .client .link:focus .icon-client{
     fill: var(--accent-color);
@@ -478,10 +475,7 @@ header{
 
 .footer-social-media .social-media-link{
     background-color: var(--footer-links-bg);
-}
-
-.footer-social-media .social-media-icon{
-    fill: var(--primary-white-color);
+    color: var(--primary-white-color);
 }
 
 /* Portfolio */
@@ -534,11 +528,15 @@ header{
     flex-basis: calc((100% - 60px) / 3);
 }
 
-.project:hover,
-.project:focus{
+.project-link {
+    display: block;
+    text-decoration: none;
+}
+.project-link:hover,
+.project-link:focus{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
-                0px 4px 4px rgba(0, 0, 0, 0.06),
-                1px 4px 6px rgba(0, 0, 0, 0.16);
+        0px 4px 4px rgba(0, 0, 0, 0.06),
+        1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .project-bottom{
@@ -566,6 +564,7 @@ header{
     letter-spacing: 0.06em;
 }
 .project-type{
+    color: var(--primary-text-color);
     font-size: 16px;
     line-height: 1.8;
 
